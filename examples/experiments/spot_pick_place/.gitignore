@@ -1,0 +1,6 @@
+classifier_data/
+classifier_ckpt/
+demo_data/
+bc_ckpt/
+run/
+videos/

@@ -1,0 +1,21 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792097933.854920  629339 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792097934.570002  629339 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+pybullet build time: Jan 29 2025 23:16:28
+I1015 22:58:56.988134 132811506997056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+I1015 22:58:56.988373 132811506997056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+I1015 22:58:57.171216 132811506997056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+2026-10-15 22:59:00.452885: W external/xla/xla/tsl/framework/bfc_allocator.cc:306] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/../../train_rlpd.py:418: DeprecationWarning: jax.tree_map is deprecated: use jax.tree.map (jax v0.4.25 or newer) or jax.tree_util.tree_map (any JAX version).
+  jax.tree_map(jnp.array, agent), sharding.replicate()
+The ResNet-10 weights already exist at '/home/marwan/.serl/resnet10_params.pkl'.
+Loaded 5.418792M parameters from ResNet-10 pretrained on ImageNet-1K
+replaced conv_init in pretrained_encoder
+replaced norm_init in pretrained_encoder
+replaced ResNetBlock_0 in pretrained_encoder
+replaced ResNetBlock_1 in pretrained_encoder
+replaced ResNetBlock_2 in pretrained_encoder
+replaced ResNetBlock_3 in pretrained_encoder
+[92m starting actor loop[00m
+  0%|          | 0/1000000 [00:00<?, ?it/s]

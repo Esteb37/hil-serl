@@ -198,7 +198,7 @@ def main(_):
         sampling_rng = jax.device_put(rng, sharding.replicate())
 
         bc_ckpt = checkpoints.restore_checkpoint(
-            FLAGS.bc_checkpoint_path,
+            os.path.abspath(FLAGS.bc_checkpoint_path),
             bc_agent.state,
         )
         bc_agent = bc_agent.replace(state=bc_ckpt)

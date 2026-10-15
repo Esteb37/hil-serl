@@ -26,46 +26,54 @@ def main(_):
     pbar = tqdm(total=success_needed)
     trajectory = []
     returns = 0
-    
-    while success_count < success_needed:
-        actions = np.zeros(env.action_space.sample().shape) 
-        next_obs, rew, done, truncated, info = env.step(actions)
-        returns += rew
-        if "intervene_action" in info:
-            actions = info["intervene_action"]
-        transition = copy.deepcopy(
-            dict(
-                observations=obs,
-                actions=actions,
-                next_observations=next_obs,
-                rewards=rew,
-                masks=1.0 - done,
-                dones=done,
-                infos=info,
-            )
-        )
-        trajectory.append(transition)
-        
-        pbar.set_description(f"Return: {returns}")
-
-        obs = next_obs
-        if done:
-            if info["succeed"]:
-                for transition in trajectory:
-                    transitions.append(copy.deepcopy(transition))
-                success_count += 1
-                pbar.update(1)
-            trajectory = []
-            returns = 0
-            obs, info = env.reset()
-            
-    if not os.path.exists("./demo_data"):
-        os.makedirs("./demo_data")
     uuid = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    file_name = f"./demo_data/{FLAGS.exp_name}_{success_needed}_demos_{uuid}.pkl"
-    with open(file_name, "wb") as f:
-        pkl.dump(transitions, f)
-        print(f"saved {success_needed} demos to {file_name}")
+
+    def save():
+        os.makedirs("./demo_data", exist_ok=True)
+        file_name = f"./demo_data/{FLAGS.exp_name}_demos_{uuid}.pkl"
+        with open(file_name, "wb") as f:
+            pkl.dump(transitions, f)
+            print(f"saved {success_count} demos to {file_name}")
+
+    try:
+        while success_count < success_needed:
+            actions = np.zeros(env.action_space.sample().shape)
+            next_obs, rew, done, truncated, info = env.step(actions)
+            returns += rew
+            if "intervene_action" in info:
+                actions = info["intervene_action"]
+            transition = copy.deepcopy(
+                dict(
+                    observations=obs,
+                    actions=actions,
+                    next_observations=next_obs,
+                    rewards=rew,
+                    masks=1.0 - done,
+                    dones=done,
+                    infos=info,
+                )
+            )
+            trajectory.append(transition)
+
+            pbar.set_description(f"Return: {returns}")
+
+            obs = next_obs
+            if done:
+                if info["succeed"]:
+                    for transition in trajectory:
+                        transitions.append(copy.deepcopy(transition))
+                    success_count += 1
+                    pbar.update(1)
+                    save()
+                trajectory = []
+                returns = 0
+                obs, info = env.reset()
+            elif info.get("save_requested", False):
+                save()
+    finally:
+        save()
+        env.close()
+
 
 if __name__ == "__main__":
     app.run(main)

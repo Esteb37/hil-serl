@@ -1,0 +1,39 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792097913.861838  628408 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792097914.563115  628408 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+pybullet build time: Jan 29 2025 23:16:28
+I1015 22:58:37.024921 135589543221056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+I1015 22:58:37.025154 135589543221056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+I1015 22:58:37.025232 135589543221056 _schedule.py:127] A polynomial schedule was set with a non-positive `transition_steps` value; this results in a constant schedule with value `init_value`.
+/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/../../train_rlpd.py:418: DeprecationWarning: jax.tree_map is deprecated: use jax.tree.map (jax v0.4.25 or newer) or jax.tree_util.tree_map (any JAX version).
+  jax.tree_map(jnp.array, agent), sharding.replicate()
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/marwan/.netrc.
+wandb: Currently logged in as: epadilla (epadilla-eth-z-rich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run car_nav_20261015_225843
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /tmp/tmpofdknlmr/wandb/run-20261015_225843-car_nav_20261015_225843
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run car_nav_20261015_225843
+wandb: ⭐️ View project at https://wandb.ai/epadilla-eth-z-rich/hil-serl
+wandb: 🚀 View run at https://wandb.ai/epadilla-eth-z-rich/hil-serl/runs/car_nav_20261015_225843
+The ResNet-10 weights already exist at '/home/marwan/.serl/resnet10_params.pkl'.
+Loaded 5.418792M parameters from ResNet-10 pretrained on ImageNet-1K
+replaced conv_init in pretrained_encoder
+replaced norm_init in pretrained_encoder
+replaced ResNetBlock_0 in pretrained_encoder
+replaced ResNetBlock_1 in pretrained_encoder
+replaced ResNetBlock_2 in pretrained_encoder
+replaced ResNetBlock_3 in pretrained_encoder
+entity: null
+exp_descriptor: car_nav
+experiment_id: car_nav_20261015_225843
+group: null
+project: hil-serl
+tag: car_nav
+unique_identifier: '20261015_225843'
+
+[92m demo buffer size: 0[00m
+[92m online buffer size: 0[00m
+[92m starting learner loop[00m
+Filling up replay buffer:   0%|          | 0/100 [00:00<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:01<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:02<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:03<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:04<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:05<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:06<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:07<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:08<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:09<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:10<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:11<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:12<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:13<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:14<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:15<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:16<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:17<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:18<?, ?it/s]Filling up replay buffer:   0%|          | 0/100 [00:19<?, ?it/s]

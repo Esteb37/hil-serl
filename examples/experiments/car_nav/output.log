@@ -1,0 +1,275 @@
+[92m demo buffer size: 2707[00m
+[92m online buffer size: 0[00m
+[92m starting learner loop[00m
+Filling up replay buffer: 341it [00:40,  8.51it/s]                                                                                          
+[92m sent initial network to actor[00m
+learner:   0%|▏                                                                                    | 1998/1000000 [01:33<8:18:05, 33.39it/s]I1015 20:56:03.224760 130701080971072 checkpoints.py:571] Saving checkpoint at step: 2000
+I1015 20:56:03.224984 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 20:56:03.225103 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 20:56:03.225183 130701080971072 abstract_checkpointer.py:35] orbax-checkpoint version: 0.11.5
+I1015 20:56:03.225932 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.
+I1015 20:56:03.227142 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.orbax-checkpoint-tmp-0
+I1015 20:56:03.231779 130701080971072 checkpoint.py:185] Wrote Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1792090563231426630, 'commit_timestamp_nsecs': None, 'custom': {}}, json={"item_handlers": null, "metrics": {}, "performance_metrics": {}, "init_timestamp_nsecs": 1792090563231426630, "commit_timestamp_nsecs": null, "custom": {}} to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA
+I1015 20:56:03.257940 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 20:56:03.315396 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.3 GiB/s (total bytes: 197.5 MiB) (time elapsed: 82 milliseconds) (per-host)
+I1015 20:56:03.545372 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 20:56:03.545628 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 631.0 MiB/s (total bytes: 197.5 MiB) (time elapsed: 312 milliseconds) (per-host)
+I1015 20:56:03.546086 130701080971072 checkpoint.py:225] Read Metadata={'item_handlers': None, 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1792090563231426630, 'commit_timestamp_nsecs': None, 'custom': {}} from /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA
+I1015 20:56:03.546327 130701080971072 checkpoint.py:244] Updated Metadata={'item_handlers': 'orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler', 'metrics': {}, 'performance_metrics': {}, 'init_timestamp_nsecs': 1792090563231426630, 'commit_timestamp_nsecs': None, 'custom': {}} to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.orbax-checkpoint-tmp-0/_CHECKPOINT_METADATA
+I1015 20:56:03.564950 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000.orbax-checkpoint-tmp-0 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000
+I1015 20:56:03.565458 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000`.
+I1015 20:56:03.565542 130701080971072 checkpointer.py:263] Finished synchronous save in 0.34 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_2000
+learner:   0%|▎                                                                                    | 3997/1000000 [02:39<8:11:26, 33.78it/s]I1015 20:57:08.630012 130701080971072 checkpoints.py:571] Saving checkpoint at step: 4000
+I1015 20:57:08.630261 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 20:57:08.630377 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 20:57:08.631171 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000.
+I1015 20:57:08.632143 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000.orbax-checkpoint-tmp-1
+I1015 20:57:08.662451 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 20:57:08.727670 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 91 milliseconds) (per-host)
+I1015 20:57:09.272732 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.54 seconds.
+I1015 20:57:09.273003 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 310.0 MiB/s (total bytes: 197.5 MiB) (time elapsed: 637 milliseconds) (per-host)
+I1015 20:57:09.292166 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000.orbax-checkpoint-tmp-1 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000
+I1015 20:57:09.292886 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000`.
+I1015 20:57:09.292977 130701080971072 checkpointer.py:263] Finished synchronous save in 0.66 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_4000
+learner:   1%|▌                                                                                    | 5997/1000000 [03:45<8:09:22, 33.85it/s]I1015 20:58:14.436191 130701080971072 checkpoints.py:571] Saving checkpoint at step: 6000
+I1015 20:58:14.436419 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 20:58:14.436592 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 20:58:14.437306 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000.
+I1015 20:58:14.438356 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000.orbax-checkpoint-tmp-2
+I1015 20:58:14.466552 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 20:58:14.524619 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.3 GiB/s (total bytes: 197.5 MiB) (time elapsed: 85 milliseconds) (per-host)
+I1015 20:58:14.749473 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.20 seconds.
+I1015 20:58:14.749742 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 636.2 MiB/s (total bytes: 197.5 MiB) (time elapsed: 310 milliseconds) (per-host)
+I1015 20:58:14.768545 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000.orbax-checkpoint-tmp-2 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000
+I1015 20:58:14.769047 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000`.
+I1015 20:58:14.769140 130701080971072 checkpointer.py:263] Finished synchronous save in 0.33 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_6000
+learner:   1%|▋                                                                                    | 7997/1000000 [04:51<8:15:17, 33.38it/s]I1015 20:59:20.300320 130701080971072 checkpoints.py:571] Saving checkpoint at step: 8000
+I1015 20:59:20.300542 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 20:59:20.300651 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 20:59:20.301367 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000.
+I1015 20:59:20.302085 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000.orbax-checkpoint-tmp-3
+I1015 20:59:20.330714 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 20:59:20.397183 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.0 GiB/s (total bytes: 197.5 MiB) (time elapsed: 94 milliseconds) (per-host)
+I1015 20:59:20.638377 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.24 seconds.
+I1015 20:59:20.638647 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 588.1 MiB/s (total bytes: 197.5 MiB) (time elapsed: 335 milliseconds) (per-host)
+I1015 20:59:20.657454 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000.orbax-checkpoint-tmp-3 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000
+I1015 20:59:20.657886 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000`.
+I1015 20:59:20.657970 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_8000
+learner:   1%|▊                                                                                    | 9999/1000000 [05:56<8:14:34, 33.36it/s]I1015 21:00:25.843339 130701080971072 checkpoints.py:571] Saving checkpoint at step: 10000
+I1015 21:00:25.843558 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:00:25.843713 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:00:25.844481 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000.
+I1015 21:00:25.845511 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000.orbax-checkpoint-tmp-4
+I1015 21:00:25.877403 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:00:25.940935 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 90 milliseconds) (per-host)
+I1015 21:00:26.497336 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.56 seconds.
+I1015 21:00:26.497604 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 305.0 MiB/s (total bytes: 197.5 MiB) (time elapsed: 647 milliseconds) (per-host)
+I1015 21:00:26.516990 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000.orbax-checkpoint-tmp-4 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000
+I1015 21:00:26.517656 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000`.
+I1015 21:00:26.517757 130701080971072 checkpointer.py:263] Finished synchronous save in 0.67 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_10000
+learner:   1%|█                                                                                   | 11997/1000000 [07:02<8:08:24, 33.72it/s]I1015 21:01:31.494451 130701080971072 checkpoints.py:571] Saving checkpoint at step: 12000
+I1015 21:01:31.494660 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:01:31.494773 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:01:31.495525 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000.
+I1015 21:01:31.496559 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000.orbax-checkpoint-tmp-5
+I1015 21:01:31.525848 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:01:31.587418 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.2 GiB/s (total bytes: 197.5 MiB) (time elapsed: 89 milliseconds) (per-host)
+I1015 21:01:31.818159 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 21:01:31.818428 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 615.7 MiB/s (total bytes: 197.5 MiB) (time elapsed: 320 milliseconds) (per-host)
+I1015 21:01:31.836942 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000.orbax-checkpoint-tmp-5 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000
+I1015 21:01:31.837580 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000`.
+I1015 21:01:31.837673 130701080971072 checkpointer.py:263] Finished synchronous save in 0.34 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_12000
+learner:   1%|█▏                                                                                  | 13997/1000000 [08:07<9:56:48, 27.54it/s]I1015 21:02:37.119504 130701080971072 checkpoints.py:571] Saving checkpoint at step: 14000
+I1015 21:02:37.119749 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:02:37.119867 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:02:37.120645 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000.
+I1015 21:02:37.121677 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000.orbax-checkpoint-tmp-6
+I1015 21:02:37.151611 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:02:37.220470 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.0 GiB/s (total bytes: 197.5 MiB) (time elapsed: 95 milliseconds) (per-host)
+I1015 21:02:37.462141 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 21:02:37.462409 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 585.4 MiB/s (total bytes: 197.5 MiB) (time elapsed: 337 milliseconds) (per-host)
+I1015 21:02:37.481407 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000.orbax-checkpoint-tmp-6 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000
+I1015 21:02:37.482205 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000`.
+I1015 21:02:37.482347 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_14000
+learner:   2%|█▎                                                                                  | 15999/1000000 [09:13<8:11:18, 33.38it/s]I1015 21:03:42.438670 130701080971072 checkpoints.py:571] Saving checkpoint at step: 16000
+I1015 21:03:42.438901 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:03:42.439065 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:03:42.439855 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000.
+I1015 21:03:42.440840 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000.orbax-checkpoint-tmp-7
+I1015 21:03:42.470357 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:03:42.536825 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.0 GiB/s (total bytes: 197.5 MiB) (time elapsed: 94 milliseconds) (per-host)
+I1015 21:03:42.771055 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.22 seconds.
+I1015 21:03:42.771394 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 599.5 MiB/s (total bytes: 197.5 MiB) (time elapsed: 329 milliseconds) (per-host)
+I1015 21:03:42.791197 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000.orbax-checkpoint-tmp-7 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000
+I1015 21:03:42.791774 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000`.
+I1015 21:03:42.791863 130701080971072 checkpointer.py:263] Finished synchronous save in 0.35 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_16000
+learner:   2%|█▌                                                                                  | 17999/1000000 [10:18<8:08:50, 33.48it/s]I1015 21:04:47.890100 130701080971072 checkpoints.py:571] Saving checkpoint at step: 18000
+I1015 21:04:47.890337 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:04:47.890513 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:04:47.891463 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000.
+I1015 21:04:47.892477 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000.orbax-checkpoint-tmp-8
+I1015 21:04:47.923840 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:04:47.982887 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.2 GiB/s (total bytes: 197.5 MiB) (time elapsed: 86 milliseconds) (per-host)
+I1015 21:04:48.209171 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.22 seconds.
+I1015 21:04:48.209454 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 630.7 MiB/s (total bytes: 197.5 MiB) (time elapsed: 313 milliseconds) (per-host)
+I1015 21:04:48.228842 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000.orbax-checkpoint-tmp-8 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000
+I1015 21:04:48.229407 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000`.
+I1015 21:04:48.229505 130701080971072 checkpointer.py:263] Finished synchronous save in 0.34 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_18000
+learner:   2%|█▋                                                                                  | 20000/1000000 [11:23<8:02:18, 33.86it/s]I1015 21:05:53.031132 130701080971072 checkpoints.py:571] Saving checkpoint at step: 20000
+I1015 21:05:53.031439 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:05:53.031643 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:05:53.032531 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000.
+I1015 21:05:53.033572 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000.orbax-checkpoint-tmp-9
+I1015 21:05:53.061422 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:05:53.117295 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.3 GiB/s (total bytes: 197.5 MiB) (time elapsed: 82 milliseconds) (per-host)
+I1015 21:05:53.659848 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.54 seconds.
+I1015 21:05:53.660170 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 315.8 MiB/s (total bytes: 197.5 MiB) (time elapsed: 625 milliseconds) (per-host)
+I1015 21:05:53.679908 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000.orbax-checkpoint-tmp-9 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000
+I1015 21:05:53.680441 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000`.
+I1015 21:05:53.680533 130701080971072 checkpointer.py:263] Finished synchronous save in 0.65 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_20000
+learner:   2%|█▊                                                                                  | 21999/1000000 [12:29<8:07:21, 33.45it/s]I1015 21:06:58.564751 130701080971072 checkpoints.py:571] Saving checkpoint at step: 22000
+I1015 21:06:58.564981 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:06:58.565161 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:06:58.566172 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000.
+I1015 21:06:58.567007 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000.orbax-checkpoint-tmp-10
+I1015 21:06:58.597865 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:06:58.660289 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.2 GiB/s (total bytes: 197.5 MiB) (time elapsed: 88 milliseconds) (per-host)
+I1015 21:06:58.908235 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.25 seconds.
+I1015 21:06:58.908562 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 586.0 MiB/s (total bytes: 197.5 MiB) (time elapsed: 337 milliseconds) (per-host)
+I1015 21:06:58.928455 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000.orbax-checkpoint-tmp-10 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000
+I1015 21:06:58.928910 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000`.
+I1015 21:06:58.928994 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_22000
+learner:   2%|██                                                                                  | 24000/1000000 [13:34<8:00:51, 33.83it/s]I1015 21:08:04.021449 130701080971072 checkpoints.py:571] Saving checkpoint at step: 24000
+I1015 21:08:04.021663 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:08:04.021771 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:08:04.022503 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000.
+I1015 21:08:04.023531 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000.orbax-checkpoint-tmp-11
+I1015 21:08:04.053862 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:08:04.107639 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.4 GiB/s (total bytes: 197.5 MiB) (time elapsed: 79 milliseconds) (per-host)
+I1015 21:08:04.347993 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.24 seconds.
+I1015 21:08:04.348260 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 616.5 MiB/s (total bytes: 197.5 MiB) (time elapsed: 320 milliseconds) (per-host)
+I1015 21:08:04.367288 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000.orbax-checkpoint-tmp-11 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000
+I1015 21:08:04.367733 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000`.
+I1015 21:08:04.367821 130701080971072 checkpointer.py:263] Finished synchronous save in 0.35 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_24000
+learner:   3%|██▏                                                                                 | 25997/1000000 [14:39<7:59:45, 33.84it/s]I1015 21:09:09.171065 130701080971072 checkpoints.py:571] Saving checkpoint at step: 26000
+I1015 21:09:09.171291 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:09:09.171455 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:09:09.172204 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000.
+I1015 21:09:09.172963 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000.orbax-checkpoint-tmp-12
+I1015 21:09:09.201487 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:09:09.269315 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.0 GiB/s (total bytes: 197.5 MiB) (time elapsed: 95 milliseconds) (per-host)
+I1015 21:09:09.812163 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.54 seconds.
+I1015 21:09:09.812446 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 309.2 MiB/s (total bytes: 197.5 MiB) (time elapsed: 638 milliseconds) (per-host)
+I1015 21:09:09.831472 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000.orbax-checkpoint-tmp-12 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000
+I1015 21:09:09.832133 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000`.
+I1015 21:09:09.832234 130701080971072 checkpointer.py:263] Finished synchronous save in 0.66 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_26000
+learner:   3%|██▎                                                                                 | 27997/1000000 [15:45<8:00:14, 33.73it/s]I1015 21:10:14.710425 130701080971072 checkpoints.py:571] Saving checkpoint at step: 28000
+I1015 21:10:14.710655 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:10:14.710766 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:10:14.711513 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000.
+I1015 21:10:14.712499 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000.orbax-checkpoint-tmp-13
+I1015 21:10:14.740509 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:10:14.805160 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 91 milliseconds) (per-host)
+I1015 21:10:15.047456 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.24 seconds.
+I1015 21:10:15.047791 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 590.8 MiB/s (total bytes: 197.5 MiB) (time elapsed: 334 milliseconds) (per-host)
+I1015 21:10:15.066339 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000.orbax-checkpoint-tmp-13 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000
+I1015 21:10:15.066993 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000`.
+I1015 21:10:15.067101 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_28000
+learner:   3%|██▌                                                                                 | 29997/1000000 [16:50<8:00:39, 33.63it/s]I1015 21:11:20.094300 130701080971072 checkpoints.py:571] Saving checkpoint at step: 30000
+I1015 21:11:20.094545 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:11:20.094774 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:11:20.095532 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000.
+I1015 21:11:20.096474 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000.orbax-checkpoint-tmp-14
+I1015 21:11:20.125088 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:11:20.187996 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 90 milliseconds) (per-host)
+I1015 21:11:20.420832 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 21:11:20.421088 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 610.3 MiB/s (total bytes: 197.5 MiB) (time elapsed: 323 milliseconds) (per-host)
+I1015 21:11:20.440134 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000.orbax-checkpoint-tmp-14 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000
+I1015 21:11:20.440670 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000`.
+I1015 21:11:20.440772 130701080971072 checkpointer.py:263] Finished synchronous save in 0.35 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_30000
+learner:   3%|██▋                                                                                 | 31997/1000000 [17:56<8:33:22, 31.43it/s]I1015 21:12:25.703406 130701080971072 checkpoints.py:571] Saving checkpoint at step: 32000
+I1015 21:12:25.703737 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:12:25.703875 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:12:25.704733 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000.
+I1015 21:12:25.705826 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000.orbax-checkpoint-tmp-15
+I1015 21:12:25.737395 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:12:25.799908 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 90 milliseconds) (per-host)
+I1015 21:12:26.376942 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.57 seconds.
+I1015 21:12:26.377256 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 295.5 MiB/s (total bytes: 197.5 MiB) (time elapsed: 668 milliseconds) (per-host)
+I1015 21:12:26.397121 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000.orbax-checkpoint-tmp-15 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000
+I1015 21:12:26.397886 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000`.
+I1015 21:12:26.397998 130701080971072 checkpointer.py:263] Finished synchronous save in 0.69 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_32000
+learner:   3%|██▊                                                                                 | 33997/1000000 [19:03<7:57:56, 33.69it/s]I1015 21:13:32.280434 130701080971072 checkpoints.py:571] Saving checkpoint at step: 34000
+I1015 21:13:32.280662 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:13:32.280770 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:13:32.281551 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000.
+I1015 21:13:32.282516 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000.orbax-checkpoint-tmp-16
+I1015 21:13:32.312798 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:13:32.383893 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.0 GiB/s (total bytes: 197.5 MiB) (time elapsed: 96 milliseconds) (per-host)
+I1015 21:13:32.618782 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 21:13:32.619043 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 595.5 MiB/s (total bytes: 197.5 MiB) (time elapsed: 331 milliseconds) (per-host)
+I1015 21:13:32.638398 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000.orbax-checkpoint-tmp-16 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000
+I1015 21:13:32.639101 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000`.
+I1015 21:13:32.639235 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_34000
+learner:   4%|███                                                                                 | 35997/1000000 [20:09<8:31:58, 31.38it/s]I1015 21:14:38.542970 130701080971072 checkpoints.py:571] Saving checkpoint at step: 36000
+I1015 21:14:38.543209 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:14:38.543366 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:14:38.544101 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000.
+I1015 21:14:38.544887 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000.orbax-checkpoint-tmp-17
+I1015 21:14:38.871255 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:14:38.932346 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 510.7 MiB/s (total bytes: 197.5 MiB) (time elapsed: 386 milliseconds) (per-host)
+I1015 21:14:39.172369 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.23 seconds.
+I1015 21:14:39.172631 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 314.9 MiB/s (total bytes: 197.5 MiB) (time elapsed: 626 milliseconds) (per-host)
+I1015 21:14:39.192002 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000.orbax-checkpoint-tmp-17 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000
+I1015 21:14:39.192750 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000`.
+I1015 21:14:39.192876 130701080971072 checkpointer.py:263] Finished synchronous save in 0.65 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_36000
+learner:   4%|███▏                                                                                | 37997/1000000 [21:15<7:55:05, 33.75it/s]I1015 21:15:44.458286 130701080971072 checkpoints.py:571] Saving checkpoint at step: 38000
+I1015 21:15:44.458560 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:15:44.458816 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:15:44.459658 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000.
+I1015 21:15:44.460931 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000.orbax-checkpoint-tmp-18
+I1015 21:15:44.489625 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:15:44.550762 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.3 GiB/s (total bytes: 197.5 MiB) (time elapsed: 85 milliseconds) (per-host)
+I1015 21:15:44.800298 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.24 seconds.
+I1015 21:15:44.800563 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 589.1 MiB/s (total bytes: 197.5 MiB) (time elapsed: 335 milliseconds) (per-host)
+I1015 21:15:44.820028 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000.orbax-checkpoint-tmp-18 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000
+I1015 21:15:44.820745 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000`.
+I1015 21:15:44.820850 130701080971072 checkpointer.py:263] Finished synchronous save in 0.36 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_38000
+learner:   4%|███▎                                                                                | 40000/1000000 [22:20<7:53:59, 33.76it/s]I1015 21:16:50.088325 130701080971072 checkpoints.py:571] Saving checkpoint at step: 40000
+I1015 21:16:50.088552 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:16:50.088663 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:16:50.089397 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000.
+I1015 21:16:50.090174 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000.orbax-checkpoint-tmp-19
+I1015 21:16:50.118804 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:16:50.183717 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.1 GiB/s (total bytes: 197.5 MiB) (time elapsed: 92 milliseconds) (per-host)
+I1015 21:16:50.421808 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.24 seconds.
+I1015 21:16:50.422101 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 596.4 MiB/s (total bytes: 197.5 MiB) (time elapsed: 331 milliseconds) (per-host)
+I1015 21:16:50.442214 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000.orbax-checkpoint-tmp-19 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000
+I1015 21:16:50.442880 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000`.
+I1015 21:16:50.442981 130701080971072 checkpointer.py:263] Finished synchronous save in 0.35 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_40000
+learner:   4%|███▌                                                                                | 41999/1000000 [23:26<7:54:51, 33.62it/s]I1015 21:17:55.733397 130701080971072 checkpoints.py:571] Saving checkpoint at step: 42000
+I1015 21:17:55.733620 130701080971072 checkpoints.py:659] Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+I1015 21:17:55.733741 130701080971072 base_pytree_checkpoint_handler.py:332] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None
+I1015 21:17:55.734530 130701080971072 checkpointer.py:216] [process=0] Started saving checkpoint to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000.
+I1015 21:17:55.735573 130701080971072 atomicity.py:144] Creating tmp directory /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000.orbax-checkpoint-tmp-20
+I1015 21:17:55.764309 130701080971072 replica_slices.py:419] Transferring arrays to host memory with options: use_replica_parallel=False, enable_pinned_host_transfer=False
+I1015 21:17:55.826788 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/blocking_bytes_per_sec: 2.2 GiB/s (total bytes: 197.5 MiB) (time elapsed: 86 milliseconds) (per-host)
+I1015 21:17:56.379636 130701080971072 future.py:140] ChainedFuture completed 1/1 futures in 0.55 seconds.
+I1015 21:17:56.379928 130701080971072 base_pytree_checkpoint_handler.py:113] [process=0] /jax/checkpoint/write/bytes_per_sec: 308.5 MiB/s (total bytes: 197.5 MiB) (time elapsed: 640 milliseconds) (per-host)
+I1015 21:17:56.400053 130701080971072 atomicity.py:287] Renaming /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000.orbax-checkpoint-tmp-20 to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000
+I1015 21:17:56.400568 130701080971072 atomicity.py:560] [process=0][thread=MainThread] Finished saving checkpoint (finalized tmp dir) to `/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000`.
+I1015 21:17:56.400654 130701080971072 checkpointer.py:263] Finished synchronous save in 0.67 seconds to /home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/run/checkpoint_42000
+learner:   4%|███▋                                                                                | 43191/1000000 [24:05<8:53:52, 29.87it/s]
+Traceback (most recent call last):
+  File "/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/../../train_rlpd.py", line 526, in <module>
+    app.run(main)
+  File "/home/marwan/miniconda3/envs/hilserl/lib/python3.10/site-packages/absl/app.py", line 410, in run
+    _run_main(main, args)
+  File "/home/marwan/miniconda3/envs/hilserl/lib/python3.10/site-packages/absl/app.py", line 355, in _run_main
+    sys.exit(main(argv))
+  File "/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/../../train_rlpd.py", line 498, in main
+    learner(
+  File "/home/marwan/esteban_ws/hil-serl/examples/experiments/car_nav/../../train_rlpd.py", line 336, in learner
+    agent, update_info = agent.update(
+  File "<string>", line 1, in <lambda>
+KeyboardInterrupt

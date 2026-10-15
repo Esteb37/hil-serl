@@ -1,0 +1,85 @@
+# spot_hil_serl's nodes. SpotEnv's own settings (topics, frames, limits, scales) live in its experiment config:
+# examples/experiments/spot_pick_place/config.py and serl_robot_infra/spot_env/spot_env.py.
+
+/game_controller_node:  # joy's SDL GameController: one standard layout for Xbox, PlayStation, ...
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.05
+    autorepeat_rate: 20.0  # Hz: /joy keeps coming while nothing changes; SpotEnv treats >0.3 s of silence as released
+
+/gamepad_teleop:
+  ros__parameters:
+    # Outputs vx, vy, arm_z, arm_x <- /joy axes (left y, left x, right y, right x), times axis_scales.
+    # Right stick: up raises the hand, right pushes it forward (Spot seen from its side, facing right).
+    axis_indices: [1, 0, 3, 2]
+    axis_scales: [1.0, 1.0, 1.0, -1.0]
+    trigger_indices: [4, 5]  # turn left, turn right
+    trigger_rest: 0.0
+    trigger_pressed: -1.0
+    buttons: [0, 1, 2, 6, 4, 3]  # gripper toggle, success, failure, start, stop, pitch toggle: A, B, X, Start, Back, Y
+    roll_buttons: [9, 10]  # roll the gripper about its axis: LB negative, RB positive
+    deadzone: 0.1
+    teleop_topic: /hil_serl/teleop
+    event_topic: /hil_serl/event
+
+/spot/gamepad_drive:  # gamepad_drive.launch.py only, moves the robot: SpotEnv's speeds and hand box
+  ros__parameters:
+    rate: 10.0
+    base_scale: [0.4, 0.3, 0.6]  # m/s, m/s, rad/s at full stick
+    hand_speed: 0.3  # m/s at full stick
+    hand_max_error: 0.05  # m the hand target may lead the measured hand
+    hand_low: [0.55, 0.0, -0.55]  # body frame; z is a backstop, floor_clearance is the floor limit
+    hand_high: [1.0, 0.0, 0.2]
+    floor_frame: spot/feet_center
+    floor_clearance: 0.03  # m: the hand frame's origin above the floor
+    hand_pitch_down: 1.5708  # rad: Y's "down" (forward: 0, after Start)
+    pitch_step: 0.25  # rad per tick while switching
+    roll_step: 0.15  # rad per tick with a bumper held
+    roll_limit: 1.5708
+    start: [stand, arm_unstow]  # Start
+    stop: [arm_stow, sit]  # Back
+
+/viser_gui:
+  ros__parameters:
+    port: 8080
+    robot: spot
+    world_frame: spot/vision
+    ground_frame: spot/feet_center
+    hand_frame: spot/hand
+    cameras: [/spot/camera/hand/compressed, /spot/camera/frontleft/compressed, /hil_serl/camera/eagle/compressed]
+    camera_rotations: [0, 90, 0]  # degrees clockwise: frontleft is mounted sideways
+    camera_width: 480
+    camera_rate: 10.0
+    commands: [stand, sit, arm_unstow, arm_stow, open_gripper, close_gripper]  # spot_ros2 Trigger services
+    battery_topic: /spot/status/battery_states
+    status_topic: /hil_serl/status
+    event_topic: /hil_serl/event
+    policy_images_topic: /hil_serl/policy_images
+
+/webcam:  # bird's-eye view of the scene, on the workstation's USB
+  ros__parameters:
+    device: /dev/v4l/by-id/usb-GENERAL_GENERAL_WEBCAM_JH0415_20200710_v004-video-index0
+    width: 640
+    height: 480
+    fps: 30.0  # asked of the camera (it delivers ~20)
+    rate: 15.0  # Hz published
+    jpeg_quality: 90
+    frame_id: eagle_camera
+    topic: /hil_serl/camera/eagle/compressed
+
+/spot/spot_startup:  # live only, moves the robot: spot_ros2's Trigger services at start and on exit
+  ros__parameters:
+    timeout: 20.0
+    driver_client: ros_spot  # lease client_name prefix of spot_ros2; any other owner (the tablet): hands off
+    startup: [claim, power_on, stand]
+    shutdown: [arm_stow, close_gripper, sit, power_off, release]
+    sit_timeout: 10.0  # s for Spot to sit before power_off; skipped if it has not
+    sat_knee: -2.5  # rad: every knee below this (sitting ~-2.75, standing ~-1.5)
+
+/spot/spot_mock:  # mock:=true only
+  ros__parameters:
+    frame_prefix: spot/
+    cmd_duration: 0.125
+    hand_speed: 0.5
+    plushy: [1.4, 0.3]  # m in spot/vision; Spot starts at the origin facing +x
+    bin: [0.6, -1.3]

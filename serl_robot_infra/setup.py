@@ -18,5 +18,7 @@ setup(
         "requests",
         "flask",
         "defusedxml",
+        "pygame",
+        "pybullet",
     ],
 )

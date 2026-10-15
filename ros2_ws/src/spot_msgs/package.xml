@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>spot_msgs</name>
+  <version>0.0.0</version>
+  <description>
+    Subset of spot_ros2's spot_msgs: the battery and lease messages only, copied verbatim from the driver on Spot's NUC
+    (~/spot_ros2/spot_msgs), so they match it on the wire. The full package needs bosdyn_msgs.
+  </description>
+  <maintainer email="epadilla@ethz.ch">Esteban Padilla</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <depend>builtin_interfaces</depend>
+  <depend>std_msgs</depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,6 @@
+demo_data/
+bc_ckpt/
+run*/
+exa
+__pycache__/
+*.pkl

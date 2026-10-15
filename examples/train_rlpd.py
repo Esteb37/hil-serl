@@ -215,7 +215,8 @@ def actor(agent, data_store, intvn_data_store, env, sampling_rng):
                 client.update()
                 obs, _ = env.reset()
 
-        if step > 0 and config.buffer_period > 0 and step % config.buffer_period == 0:
+        save_requested = info.pop("save_requested", False)  # e.g. the Spot GUI's Save button
+        if save_requested or (step > 0 and config.buffer_period > 0 and step % config.buffer_period == 0):
             # dump to pickle file
             buffer_path = os.path.join(FLAGS.checkpoint_path, "buffer")
             demo_buffer_path = os.path.join(FLAGS.checkpoint_path, "demo_buffer")
@@ -285,15 +286,16 @@ def learner(rng, agent, replay_buffer, demo_buffer, wandb_logger=None):
     server.publish_network(agent.state.params)
     print_green("sent initial network to actor")
 
-    # 50/50 sampling from RLPD, half from demo and half from online experience
+    # 50/50 sampling from RLPD, half from demo and half from online experience; pure RL (no demos): online only
+    pure_rl = FLAGS.demo_path is None
     replay_iterator = replay_buffer.get_iterator(
         sample_args={
-            "batch_size": config.batch_size // 2,
+            "batch_size": config.batch_size if pure_rl else config.batch_size // 2,
             "pack_obs_and_next_obs": True,
         },
         device=sharding.replicate(),
     )
-    demo_iterator = demo_buffer.get_iterator(
+    demo_iterator = None if pure_rl else demo_buffer.get_iterator(
         sample_args={
             "batch_size": config.batch_size // 2,
             "pack_obs_and_next_obs": True,
@@ -319,8 +321,8 @@ def learner(rng, agent, replay_buffer, demo_buffer, wandb_logger=None):
         for critic_step in range(config.cta_ratio - 1):
             with timer.context("sample_replay_buffer"):
                 batch = next(replay_iterator)
-                demo_batch = next(demo_iterator)
-                batch = concat_batches(batch, demo_batch, axis=0)
+                if not pure_rl:
+                    batch = concat_batches(batch, next(demo_iterator), axis=0)
 
             with timer.context("train_critics"):
                 agent, critics_info = agent.update(
@@ -330,8 +332,8 @@ def learner(rng, agent, replay_buffer, demo_buffer, wandb_logger=None):
 
         with timer.context("train"):
             batch = next(replay_iterator)
-            demo_batch = next(demo_iterator)
-            batch = concat_batches(batch, demo_batch, axis=0)
+            if not pure_rl:
+                batch = concat_batches(batch, next(demo_iterator), axis=0)
             agent, update_info = agent.update(
                 batch,
                 networks_to_update=train_networks_to_update,
@@ -455,8 +457,7 @@ def main(_):
             include_grasp_penalty=include_grasp_penalty,
         )
 
-        assert FLAGS.demo_path is not None
-        for path in FLAGS.demo_path:
+        for path in FLAGS.demo_path or []:
             with open(path, "rb") as f:
                 transitions = pkl.load(f)
                 for transition in transitions:

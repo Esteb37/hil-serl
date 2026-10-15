@@ -87,6 +87,14 @@ Check out the [Run with Franka Arm](/docs/franka_walkthrough.md)
  - [Object Handover](/docs/franka_walkthrough.md#3-object-handover)
  - [Egg Flip](/docs/franka_walkthrough.md#4-egg-flip)
 
+## Run with Spot
+
+Pick-and-place on Spot with arm over ROS 2, with an Xbox gamepad for demos and interventions: [Spot walkthrough](/docs/spot_walkthrough.md). Paper summary and implementation notes: [HIL-SERL paper notes](/docs/hil_serl_paper_notes.md).
+
+## Run in simulation: car parking
+
+A top-down car (PyBullet + pygame, no ROS) drives random curved roads to a red box and parks in it, seeing only a visibility cone, a GPS to the box and its own velocity and acceleration ([car_env](/serl_robot_infra/car_env/car_env.py)). Gamepad: left stick steers, right trigger drives, left trigger brakes and reverses, Start starts a demo, X aborts. From [examples/experiments/car_nav](/examples/experiments/car_nav): `record_demos.sh`, then `run_learner.sh` and `run_actor.sh` side by side; `--eval_checkpoint_step=N --eval_n_trajs=20` on the actor evaluates on the 5 held-out maps.
+
 <!-- ## Contribution
 
 We welcome contributions to this repository! Fork and submit a PR if you have any improvements to the codebase. Before submitting a PR, please run `pre-commit run --all-files` to ensure that the codebase is formatted correctly. -->
